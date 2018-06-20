@@ -1,0 +1,15 @@
+RewriteEngine on 
+RewriteRule ^index.html$ index.php
+RewriteRule ^home.html$ home.php
+RewriteRule ^gioi-thieu$ home.php?p=about
+RewriteRule ^lien-he$ home.php?p=contact
+RewriteRule ^gio-hang/$ home.php?p=checkout
+RewriteRule ^thong-tin-giao-hang/$ home.php?p=delivery
+RewriteRule ^thanh-toan/$ home.php?p=payment
+RewriteRule ^hoan-tat/$ home.php?p=hoantat_dh
+RewriteRule ^search/(.*)/(.*)/$ home.php?p=kqtk&tk=$1&page=$2
+RewriteRule ^search/(.*)/$ home.php?p=kqtk&tk=$1&page=1
+RewriteRule ^cat/(.*)/(.*)/(.*)/$ home.php?p=sp_trongloai&TenLoai=$2&idCLa=$1&page=$3  [L]
+RewriteRule ^cat/(.*)/(.*)/1/$ home.php?p=sp_trongloai&TenLoai=$2&idCLa=$1&page=1 [L]
+RewriteRule ^san-pham/(.*).html$ home.php?p=sp_chitiet&idSP=$1 [L]
+
